@@ -22,7 +22,7 @@ The computer is able to be programmed manually through the MAR and RAM modules u
 - **B Register** - Stores an 8-bit value for use in the ALU.
 - **Display** - Is able to output the value on the bus to 7-segment displays. 
 
-## Control Lines
+### Control Lines
 - **HLT** - Halt - Stops the system clock. 
 - **MI** - MAR In - Accepts a 4-bit piece of data from the first four bits of the bus into the MAR.
 - **RI** - RAM In - Stores the contents of the bus in memory.
@@ -40,8 +40,22 @@ The computer is able to be programmed manually through the MAR and RAM modules u
 - **CO** - Counter Out - Outputs the program counter contents to the bus.
 - **J** - Jump - Jumps the program counter to the 4-bit value held on the bus. 
 
-## Instructions
+### Instructions
 ```
+v : 4-bit value between 0000 and 1111.
+Example: ADD 15 - Adds the contents of register A with the data stored in memory location 15 (1111) and stores the sum in register A.
+
 0000 - NOP - No operation
-  
-0001 - LDA - Loads Register A  
+0001 - LDA v - Loads Register A with data from memory location v
+0010 - ADD v - Adds the contents of register A with the data stored in memory location v and stores the sum in register A.
+0011 - SUB v - Subtracts the contents of memory location v from the value stored in the A register and stores the sum in register A.
+0100 - STA v - Stores the contents of the A register into memory location v.
+0101 - LDI v - Loads the value v into register A.
+0110 - JMP v - Sets the program counter to value v.
+.
+.
+.
+1110 - OUT - Displays the contents of the A register in the display module.
+1111 - HLT - Halts the system clock.
+```
+
