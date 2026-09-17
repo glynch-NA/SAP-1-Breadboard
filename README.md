@@ -15,7 +15,7 @@ The computer is able to be programmed manually through the MAR and RAM modules u
 
 - **Memory Address Register** - Selects memory location from bus or manually.
 
--**Random Access Memory** - Program and data storage. Can be programmed manually.
+- **Random Access Memory** - Program and data storage. Can be programmed manually.
 
 - **Instruction Register** - Instruction storage from bus to control logic. 
 
@@ -31,6 +31,6 @@ The computer is able to be programmed manually through the MAR and RAM modules u
 
 - **Display** - Is able to output the value on the bus to 7-segment displays. 
 
-<u>NOTE</u>: I unfortunately was unable to construct the flags register and subsequent opcode due to a supply mishap. Thus the computer I built cannot be considered 'Turing Complete' since it cannot preform conditional jump operations.  
+<ins>NOTE</ins>: I unfortunately was unable to construct the flags register and subsequent opcode due to a supply mishap. Thus the computer I built cannot be considered 'Turing Complete' since it cannot preform conditional jump operations.  
 
 ## Instructions
