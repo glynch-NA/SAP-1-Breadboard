@@ -14,8 +14,8 @@ The computer is able to be programmed manually through the MAR and RAM modules u
 - **Clock** - Adjustable/manual timing control.
 - **Memory Address Register** - Selects memory location from bus or manually.
 - **Random Access Memory** - Program and data storage. Can be programmed manually.
-- **Instruction Register** - Instruction storage from bus to control logic. 
-- **Control Logic** - Instruction interpretation and sequence counter. Displays what control words are in use. 
+- **Instruction Register** - Instruction storage. Data from bus to control logic and back out to bus. 
+- **Control Logic** - Instruction interpretation and sequence counter. Displays what control bits are in use. 
 - **Program counter** - Displays where in the program the computer is and what to execute next.
 - **A Register** - Storage of an 8-bit value for ALU use or immediate access.
 - **ALU** - Performs addition and subtraction operations using A and B registers.
