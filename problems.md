@@ -22,6 +22,6 @@ Many of the issues I came across have already been addressed on the Ben Eater Re
  
 # General Fixes
 * You can find many general solutions on the troubleshooting page such as adding pull up/down resistors to most input lines on each chip and resistors in series with all LEDs. There are a few other things I would recommend though.
-  -Buy 24 gauge wire or thinly insulated 22 gauge wire. The 22 gauge wire I purchased was far too thick to bend properly so I ended up with some sections of wire looking like a snake.
-  -If you can afford it certainly buy an oscilloscope and a high quality DVM. Having reliable tools such as these make troubleshooting a breeze.
-  -Get yourself a piece of wood or pegboard to put the computer on when it nears completion. Moving the computer when all that's holding it together are some wires between boards begs for tragedy.
+  - Buy 24 gauge wire or thinly insulated 22 gauge wire. The 22 gauge wire I purchased was far too thick to bend properly so I ended up with some sections of wire looking like a snake.
+  - If you can afford it certainly buy an oscilloscope and a high quality DVM. Having reliable tools such as these make troubleshooting a breeze.
+  - Get yourself a piece of wood or pegboard to put the computer on when it nears completion. Moving the computer when all that's holding it together are some wires between boards begs for tragedy.
