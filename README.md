@@ -7,6 +7,9 @@ Built almost entirely using logic ICs, with some more complex components and add
 
 My goal with this documentation is to share the insights I gained and where I found solutions to problems which were beyond my expertise. 
 
+[Solutions to problems](https://github.com/glynch-NA/SAP-1-Breadboard/blob/main/problems.md#problems-encountered-and-fixed) 
+[Arduino](https://github.com/glynch-NA/SAP-1-Breadboard/blob/main/Arduino/ArduinoControl.md#arduino-control-augmentation)
+
 ## Overview
 The computer is able to be programmed manually through the MAR and RAM modules using dip switches, where binary instructions are input to locations within memory which the computer then advances through. The control logic of the computer uses two AT28C64B EEPROMs that are programmed using a homemade Arduino Nano EEPROM programmer. The EEPROMs translate the binary instruction that is stored in RAM to microcode that the control logic then runs through. 
 
