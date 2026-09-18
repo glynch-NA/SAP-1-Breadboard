@@ -7,4 +7,5 @@ Using the serial interface in the Arduino IDE you are able to control the digita
 The code is listed [here](arduino_control_code.ino). 
 
 ![ArduinoControlLines](Images/ArduinoControlLines.png)
+
 ![ArduinoControlOverview](Images/ArduinoControlOverview.jpg)
