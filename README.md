@@ -69,6 +69,7 @@ Example: ADD 15 - Adds the contents of register A with the data stored in memory
 Programming the computer requires enabling the manual memory address selection mode using a toggle switch and inputting desired values (instructions) into the memory. 
 
 The following code takes the form: Assembly | Memory address | RAM contents
+
 The RAM contents include the binary form of the assembly instruction where the first four bits are the values either for memory location, step to jump to, or what to load immediately into the A register. The last four bits is the instruction as defined above in (#Instructions). 
 ```
 Initial Programming required:
