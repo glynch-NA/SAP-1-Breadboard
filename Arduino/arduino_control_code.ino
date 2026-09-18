@@ -94,7 +94,7 @@ void loop() {
     }
 
 
-    if((serialInput == "SO")||(serialInput == "so")){
+    if((serialInput == "EO")||(serialInput == "eo")){
       digitalWrite(9, !digitalRead(9));
      
       if(digitalRead(9) == HIGH){
@@ -185,7 +185,7 @@ void loop() {
     if((serialInput == "HLT")||(serialInput == "hlt")){
       digitalWrite(17, !digitalRead(17));
      
-      if(digitalRead(10) == HIGH){
+      if(digitalRead(17) == HIGH){
         Serial.println("Pin HLT ON");
       }else{
         Serial.println("Pin HLT OFF");
