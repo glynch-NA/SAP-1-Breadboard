@@ -9,7 +9,10 @@ The code is listed [here](arduino_control_code.ino).
 A few important things to keep in mind when applying this, however. 
 - The arduino must be plugged in to your controlling device (PC or laptop) <ins>AFTER</ins> the power supply to the 8-bit computer is turned on. Otherwise the data pins of the nano may try to supply the computer with its power thus drawing too much current through the nano and components.
 - You must also unplug the arduino first when shutting down the computer for the same reasons as above.
-- The ground pin of the arduino needs to be hooked up to the common ground of the computer. But the vcc of the arduino should <ins>NOT</ins> be connected.
+- The ground pin of the arduino needs to be hooked up to the common ground of the computer. But the vcc of the arduino should <ins>NOT</ins> be connected due to enabling a conflicting current supply. 
+- Pull down resistors on the control lines is good practice as well for eliminating floating I/O lines. 
+
+While this is technically using more than simple logic gate ICs for operating the computer, this is only for debugging and once the other half of the control module is built, this debugging solution is not to be used. It may cause issues with the data pins of the EEPROMs otherwise. 
 
 ![ArduinoControlLines](../Images/ArduinoControlLines.png)
 
