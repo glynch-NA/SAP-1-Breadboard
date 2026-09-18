@@ -70,7 +70,7 @@ Programming the computer requires enabling the manual memory address selection m
 
 The following code takes the form: Assembly | Memory address | RAM contents
 
-The RAM contents include the binary form of the assembly instruction where the first four bits are the values either for memory location, step to jump to, or what to load immediately into the A register. The last four bits is the instruction as defined above in [Instructions](#instructions). 
+The RAM contents include the binary form of the assembly instruction where the first four bits (least significant, rightmost) are the values either for memory location, step to jump to, or what to load immediately into the A register. The last four bits (most significant, leftmost) are for the instruction as defined above in [Instructions](#instructions). 
 ```
 Initial Programming required:
 Memory Location | Value/RAM Contents
@@ -92,3 +92,4 @@ LDA 14 | 1001 | 0001 1110
 ADD 15 | 1010 | 0010 1111
 OUT    | 1011 | 1110 0000
 JMP 4  | 1100 | 0110 0100
+```
