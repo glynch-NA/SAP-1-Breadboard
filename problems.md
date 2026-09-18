@@ -1,9 +1,14 @@
 # Problems Encountered and Fixed
-<ins>Note</ins>: Not all issues encountered are listed here, many were simple wiring mistakes. Always triple check your connections! 
+Many of the issues I came across have already been addressed on the Ben Eater Reddit troubleshooting page where in depth explanations about most issues can be found. The link to that page is https://www.reddit.com/r/beneater/wiki/troubleshooting/ . Not all issues that I encountered are listed here, many were simple wiring mistakes. Always triple check your connections! 
 
 * Inconsistent behavior from the memory modules
-  - After noticing that the operation of the RAM/MAR modules depended on whether the breadboards were perfectly level or not I inspected each component on the boards. What I found was that the pins on the     74LS189s were too short to properly fit comfortably into the sockets of the breadboard. The solution was to use dip risers for both of these chips to secure a good connection.
+  - After noticing that the operation of the RAM/MAR modules depended on whether the breadboards were perfectly level or not I inspected each component on the boards. What I found was that the pins on the     74LS189s were too short to properly fit into the sockets of the breadboard. The solution was to use dip risers for both of these chips to secure a good connection.
 * Fragile power supply
   - The power supply needs to be connected to a breadboard that is directly attached to the computer itself. Running wires across an open gap between the power supply and the computer lead to too many accidental resets.
 * Memory corruption
-  - 
+  - When switching between PROG/RUN mode using the toggle switch, the contents of the RAM would be erased. A detailed explanation is offered here https://github.com/blurpy/8-bit-computer/blob/master/issues.md#ram-mode-switch-changes-memory-content and here https://www.reddit.com/r/beneater/wiki/troubleshooting/. To sum it up, there is a brief moment when the write enable (WE) to the 74ls189s goes low when the switch is toggled, leading to the RAM to store whatever is on its inputs at that moment. The fix is to add a .1uF (or .01uF if .1uF doesnt work) capacitor over the write enable line of the RAM chip to vcc. What worked for me was two 22pF ceramic capacitors in parallel across the write enable line to vcc.
+* Program counter double counting
+  - The program counter was counting on both the rising and falling edge of the clock signal. A solution is found here https://www.reddit.com/r/beneater/comments/j9yrqr/program_counter_counting_on_both_rising_and/ and here https://www.reddit.com/r/beneater/comments/curlvs/comment/eykh64s/?utm_source=share&utm_medium=web2x&context=3. The RAM edge detector was interfering with the system clock pulse due to the setup of the capacitor on the edge detector. The solution is to double invert the edge detector to isolate its signal.
+* Clock registers multiple pulses when switching modes
+  -When toggling between step and auto, the clock module was sending multiple signals through the system. I found a solution here https://www.reddit.com/r/beneater/comments/eai6ke/issue_with_clock_kit_and_possible_solution_with/ . A unique solution to the issue where they change the form of toggling between clock modes to a push button. After implementing this I had no further issues.
+* 
