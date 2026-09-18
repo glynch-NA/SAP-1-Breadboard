@@ -5,3 +5,6 @@ Just after hooking up all the control lines to their corresponding LED on the fi
 Using the serial interface in the Arduino IDE you are able to control the digital I/O pins on the nano by typing the letter or [characters](https://github.com/glynch-NA/SAP-1-Breadboard/blob/main/README.md#control-lines) of the control line you wish to enable/disable. By doing so you can debug efficiently and test each individual operation.
 
 The code is listed [here](arduino_control_code.ino). 
+
+![ArduinoControlLines](Images/ArduinoControlLines.png)
+![ArduinoControlOverview](Images/ArduinoControlOverview.jpg)
