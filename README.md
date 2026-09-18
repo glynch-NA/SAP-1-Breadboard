@@ -59,3 +59,35 @@ Example: ADD 15 - Adds the contents of register A with the data stored in memory
 1111 - HLT - Halts the system clock.
 ```
 
+### Instruction Sequence
+1. Fetches Instruction.
+2. Instruction is read into control logic. 
+3. Performs Instruction specific operations.
+4. Advances to next instruction unless halted or jumped.
+
+### Program Example - Fibonacci Sequence
+Programming the computer requires enabling the manual memory address selection mode using a toggle switch and inputting desired values (instructions) into the memory. 
+
+The following code takes the form: Assembly | Memory address | RAM contents
+The RAM contents include the binary form of the assembly instruction where the first four bits are the values either for memory location, step to jump to, or what to load immediately into the A register. The last four bits is the instruction as defined above in (#Instructions). 
+```
+Initial Programming required:
+Memory Location | Value/RAM Contents
+1110 | 0000 0000
+1111 | 0000 0001
+
+Program:
+Assembly | Memory Location | RAM Contents
+LDA 14 | 0000 | 0001 1110
+OUT    | 0001 | 1110 0000
+ADD 15 | 0010 | 0010 1111
+OUT    | 0011 | 1110 0000
+STA 15 | 0100 | 0100 1111
+LDA 14 | 0101 | 0001 1110
+ADD 15 | 0110 | 0010 1111
+OUT    | 0111 | 1110 0000
+STA 14 | 1000 | 0100 1110
+LDA 14 | 1001 | 0001 1110
+ADD 15 | 1010 | 0010 1111
+OUT    | 1011 | 1110 0000
+JMP 4  | 1100 | 0110 0100
