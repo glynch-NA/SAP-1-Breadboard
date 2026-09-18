@@ -22,7 +22,7 @@ The computer is able to be programmed manually through the MAR and RAM modules u
 - **B Register** - Stores an 8-bit value for use in the ALU.
 - **Display** - Is able to output the value on the bus to 7-segment displays. 
 
-### Control Lines
+## Control Lines
 - **HLT** - Halt - Stops the system clock. 
 - **MI** - MAR In - Accepts a 4-bit piece of data from the first four bits of the bus into the MAR.
 - **RI** - RAM In - Stores the contents of the bus in memory.
@@ -40,7 +40,7 @@ The computer is able to be programmed manually through the MAR and RAM modules u
 - **CO** - Counter Out - Outputs the program counter contents to the bus.
 - **J** - Jump - Jumps the program counter to the 4-bit value held on the bus. 
 
-### Instructions
+## Instructions
 ```
 v : 4-bit value between 0000 and 1111.
 Example: ADD 15 - Adds the contents of register A with the data stored in memory location 15 (1111) and stores the sum in register A.
@@ -59,13 +59,13 @@ Example: ADD 15 - Adds the contents of register A with the data stored in memory
 1111 - HLT - Halts the system clock.
 ```
 
-### Instruction Sequence
+## Instruction Sequence
 1. Fetches Instruction.
 2. Instruction is read into control logic. 
 3. Performs Instruction specific operations.
 4. Advances to next instruction unless halted or jumped.
 
-### Program Example - Fibonacci Sequence
+## Program Example - Fibonacci Sequence
 Programming the computer requires enabling the manual memory address selection mode using a toggle switch and inputting desired values (instructions) into the memory. 
 
 The following code takes the form: Assembly | Memory address | RAM contents
