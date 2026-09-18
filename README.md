@@ -8,6 +8,7 @@ Built almost entirely using logic ICs, with some more complex components and add
 My goal with this documentation is to share the insights I gained and where I found solutions to problems which were beyond my expertise. 
 
 [Solutions to problems](https://github.com/glynch-NA/SAP-1-Breadboard/blob/main/problems.md#problems-encountered-and-fixed) 
+
 [Arduino](https://github.com/glynch-NA/SAP-1-Breadboard/blob/main/Arduino/ArduinoControl.md#arduino-control-augmentation)
 
 ## Overview
